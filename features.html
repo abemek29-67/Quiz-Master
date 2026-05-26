@@ -8,15 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Master Information</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <!-- Header Section-->
-    <header class="main-header">
-        <div class="container">
+    <header class="header">
+        <div class=" header header-container">
             <div class="logo">Quiz Master ⭐</div>
-            <nav class="main-nav">
+            <nav class="nav">
                 <a href="index.html">Home</a>
                 <a href="features.html">Features</a>
                 <a href="features.html">About</a>
@@ -26,55 +26,71 @@
     </header>
 
 
-    <!-- Header for clarification -->
-    <div class="info-header">
-        <h1>Information Center</h1>
-    </div>
+    <section class="features-section">
 
-    <!-- Cards -->
-    <section>
-        <div class="cards-grid">
-            <div class="features-card">
-                <p class="title-feature-card">Features</p>
-                <ul>
-                    <li>Fast Responses</li>
-                    <li>Tricky Questions</li>
-                    <li>Freindly Layout</li>
-                </ul>
-            </div>
+        <div class="container">
 
+            <h1 class="section-title">
+                Information Center
+            </h1>
 
+            <div class="cards-grid">
 
-            <div class="about-card">
-                <p class="title-about-card">About</p>
-                <p>
-                    Created at the heart of BT's computer
-                    science program the freshman 💪
-                </p>
-            </div>
+                <!-- Card 1 -->
+                <div class="info-card">
 
+                    <h2 class="card-title">
+                        Features
+                    </h2>
 
+                    <ul class="card-list">
+                        <li>Fast Responses</li>
+                        <li>Tricky Questions</li>
+                        <li>Friendly Layout</li>
+                    </ul>
 
-            <div class="contact-card">
-                <form action="#" method="post">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Your Name">
+                </div>
 
-                    <label for="phone">Phone</label>
-                    <input type="number" id="phone" name="phone" placeholder="Your Phone Number">
+                <!-- Card 2 -->
+                <div class="info-card">
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email">
+                    <h2 class="card-title">
+                        About
+                    </h2>
 
-                    <label for="message">Message</label>
-                    <input type="message" id="message" name="message" rows="6" placeholder="Your Message">
+                    <p class="card-text">
+                        Created at the heart of BT's computer science
+                        program by passionate freshmen developers 💪
+                    </p>
 
-                    <button type="submit" class="contact-btn">Send Message</button>
-                </form>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="info-card">
+
+                    <h2 class="card-title">
+                        Contact Us
+                    </h2>
+
+                    <form class="contact-form">
+
+                        <input type="text" placeholder="Your Name">
+
+                        <input type="tel" placeholder="Phone Number">
+
+                        <input type="email" placeholder="Your Email">
+
+                        <textarea rows="5" placeholder="Your Message"></textarea>
+
+                        <button type="submit" class="btn btn-primary">
+                            Send Message
+                        </button>
+
+                    </form>
+                </div>
             </div>
         </div>
     </section>
-
 
     <!-- Quick Links and Footer -->
     <hr>
@@ -84,10 +100,10 @@
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="features.html">About</a></li>
-                <li><a href="features.html">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="features.html">About</a></li>
+                    <li><a href="features.html">Contact</a></li>
                 </ul>
             </div>
             <!-- second column -->
