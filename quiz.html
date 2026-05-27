@@ -2,64 +2,76 @@
 <html lang="en">
 
 <head>
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Master Quiz Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <!-- Header Section-->
-    <header class="main-header">
-        <div class="container">
-            <div class="logo">Quiz Master ⭐</div>
-            <nav class="main-nav">
-                <a href="index.html">Home</a>
-                <a href="features.html">Features</a>
-                <a href="features.html">About</a>
-                <a href="features.html">Contact</a>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                Quiz Master ⭐
+            </div>
+            <nav class="nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="features.html">Features</a>
+                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
 
-    <div class="container-intro">
-        <h1 class="intro-quiz">Quiz Center</h1>
-        <p>
-            Are you ready for a challenging trivia quiz?
-            Buckle up for this intense rollercoaster of questions!
-            Be confident and remeber to do your best!
-        </p>
-    </div>
+    <!-- ================= QUIZ SECTION ================= -->
+    <main>
+        <section class="features-section">
+            <div class="container">
+                <h1 class="section-title">
+                    Quiz Center
+                </h1>
 
+                <p class="quiz-description">
+                    Are you ready for a challenging trivia quiz?
+                    Buckle up for this intense rollercoaster of questions!
+                    Be confident and remember to do your best!
+                </p>
 
-    <!-- Cards -->
-    <section>
-        <div class="cards-grid">
-            <div class="previous-card">
-                <p class="title-previous-card">Previous Score</p>
-                <p></p>
+                <div class="cards-grid">
+
+                    <div class="info-card">
+                        <h2 class="card-title">Previous Score</h2>
+                        <p class="card-text">0%</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h2 class="card-title">High Score</h2>
+                        <p class="card-text">0%</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h2 class="card-title">Number of Attempts</h2>
+                        <p class="card-text">0</p>
+                    </div>
+
+                </div>
+
+                <div class="quiz-btn-container">
+
+                    <button class="btn btn-primary">
+                        Start Now
+                    </button>
+
+                </div>
+
             </div>
 
-
-
-            <div class="about-card">
-                <p class="title-high-card">High Score</p>
-                <p></p>
-            </div>
-
-            <div class="about-card">
-                <p class="title-number-card">Number of Attempts</p>
-                <p></p>
-            </div>
-        </div>
-    </section>
-
-    <hr>
-    <button class="quiz-start">Start Now</button>
-
+        </section>
+    </main>
 </body>
 
 </html>
