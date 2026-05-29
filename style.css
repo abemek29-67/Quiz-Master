@@ -118,8 +118,9 @@ body {
 }
 
 .btn-primary {
+    color: white;
     background-color: #d92607d0;
-    color: #ffffff;
+    text-decoration: none;
     padding: 14px 30px;
     font-size: 18px;
     border-radius: 30px;
