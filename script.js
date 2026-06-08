@@ -56,3 +56,28 @@ function showQuestion() {
     });
 }
 
+function selectAnswer(button, answer) {
+    const correctAnswer =
+        questions[currentQuestion].correct_answer;
+
+    const buttons =
+        answersElement.querySelectorAll("button");
+
+    buttons.forEach(btn => {
+        btn.disabled = true;
+
+        if (btn.textContent === correctAnswer) {
+            btn.style.backgroundColor = "green";
+            btn.style.color = "white";
+        }
+    });
+
+    if (answer === correctAnswer) {
+        score++;
+    } else {
+        button.style.backgroundColor = "red";
+        button.style.color = "white";
+    }
+
+    nextBtn.style.display = "inline-block";
+}
