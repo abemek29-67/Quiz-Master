@@ -81,3 +81,69 @@ function selectAnswer(button, answer) {
 
     nextBtn.style.display = "inline-block";
 }
+
+function nextQuestion() {
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+        showQuestion();
+    } else {
+        endQuiz();
+    }
+}
+
+function endQuiz() {
+    const percentage =
+        Math.round((score / questions.length) * 100);
+
+    let highScore =
+        Number(localStorage.getItem("highScore")) || 0;
+
+    let attempts =
+        Number(localStorage.getItem("attempts")) || 0;
+
+    attempts++;
+
+    if (percentage > highScore) {
+        highScore = percentage;
+        localStorage.setItem("highScore", highScore);
+    }
+
+    localStorage.setItem("previousScore", percentage);
+    localStorage.setItem("attempts", attempts);
+
+    questionElement.innerHTML =
+        `Quiz Complete! Your Score: ${percentage}%`;
+
+    answersElement.innerHTML = "";
+
+    nextBtn.style.display = "none";
+
+    updateStats();
+}
+
+function updateStats() {
+    const stats =
+        document.querySelectorAll(".card-text");
+
+    if (stats.length >= 3) {
+        stats[0].textContent =
+            (localStorage.getItem("previousScore") || 0) + "%";
+
+        stats[1].textContent =
+            (localStorage.getItem("highScore") || 0) + "%";
+
+        stats[2].textContent =
+            localStorage.getItem("attempts") || 0;
+    }
+}
+
+if (startBtn) {
+    startBtn.addEventListener("click", startQuiz);
+}
+
+if (nextBtn) {
+    nextBtn.addEventListener("click", nextQuestion);
+}
+
+updateStats();
